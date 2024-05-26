@@ -124,7 +124,6 @@ export function GameSessionForm(): React.JSX.Element {
                         {player}
                       </MenuItem>
                     ))}
-                  />
                 </Select>
               </FormControl>
             </Grid>

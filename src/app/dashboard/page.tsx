@@ -20,19 +20,19 @@ export default function Page(): React.JSX.Element {
   return (
     <Grid container spacing={3}>
       <Grid lg={4} sm={6} xs={12}>
-        <Budget sx={{ height: 'auto' }} session="Rita's Game" game="Counter Strike 2" playernum='4' members='17,400'/>
+        <Budget sx={{ height: 'auto' }} session="Rita's Game" game="Counter Strike 2" level='Beginner' femalefriendly='40%' playernum='4' members='17,400' imageUrl = 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/730/capsule_616x353.jpg?t=1716504320'/>
       </Grid>
       <Grid lg={4} sm={6} xs={12}>
-        <Budget sx={{ height: 'auto' }} session="Another Game" game="League of Legends" playernum='5' members='345,678'/>
+        <Budget sx={{ height: 'auto' }} session="Miri's Game" game="League of Legends" level='Advanced' femalefriendly='20%' playernum='5' members='35,678' imageUrl='https://cdn1.epicgames.com/offer/24b9b5e323bc40eea252a10cdd3b2f10/EGS_LeagueofLegends_RiotGames_S1_2560x1440-80471666c140f790f28dff68d72c384b'/>
       </Grid>
       <Grid lg={4} md={6} xs={12}>
         <Traffic chartSeries={[63, 15, 22]} labels={['Desktop', 'Tablet', 'Phone']} sx={{ height: '100%' }} />
       </Grid>
       <Grid lg={4} sm={6} xs={12}>
-        <Budget sx={{ height: 'auto' }} session="Another Game" game="League of Legends" playernum='5' members='345,678'/>
+        <Budget sx={{ height: 'auto' }} session="InfernoIvy's Game" game="Elden Ring" level='Beginner' femalefriendly='80%' playernum='5' members='9,678' imageUrl = 'https://static.bandainamcoent.eu/high/elden-ring/elden-ring/00-page-setup/elden-ring-new-header-mobile.jpg'/>
       </Grid>
       <Grid lg={4} sm={6} xs={12}>
-        <Budget sx={{ height: 'auto' }} session="Another Game" game="League of Legends" playernum='5' members='345,678'/>
+        <Budget sx={{ height: 'auto' }} session="AstraNova's Game" game="Grand Theft Auto" level='Intermediate' femalefriendly='70%' playernum='3' members='5,678' imageUrl = 'https://assetsio.gnwcdn.com/eurogamer-zjp1vx.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp'/>
       </Grid>
       
 

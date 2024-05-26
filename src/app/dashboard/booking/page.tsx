@@ -13,11 +13,11 @@ import { GameSessionForm } from '@/components/dashboard/booking/game-booking-for
 
 export default function Page(): React.JSX.Element {
   return (
-    <Stack spacing={3} >
+    <Stack spacing={3} sx={{ minHeight: '10vh', justifyContent: 'center', alignItems: 'center' }}>
       <div>
         <Typography variant="h4">Create Game Session</Typography>
       </div>
-      <Grid container spacing={3}>
+      <Grid container justifyContent="center" alignItems="center">
         <Grid lg={8} md={6} xs={12}>
           <GameSessionForm />
         </Grid>
