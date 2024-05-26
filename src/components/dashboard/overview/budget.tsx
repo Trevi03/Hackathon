@@ -16,7 +16,7 @@ export interface BudgetProps {
   session: string;
   game: string;
   level: string;
-  femalefriendly: string;
+  // femalefriendly: string;
   playernum: string;
   members: string;
   imageUrl: string;

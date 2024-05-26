@@ -1,83 +1,59 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
+import Avatar from '@mui/material/Avatar';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardHeader from '@mui/material/CardHeader';
-import Chip from '@mui/material/Chip';
-import Divider from '@mui/material/Divider';
+import CardContent from '@mui/material/CardContent';
+import Stack from '@mui/material/Stack';
 import type { SxProps } from '@mui/material/styles';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import { ArrowRight as ArrowRightIcon } from '@phosphor-icons/react/dist/ssr/ArrowRight';
-import dayjs from 'dayjs';
+import Typography from '@mui/material/Typography';
+import { ArrowDown as ArrowDownIcon } from '@phosphor-icons/react/dist/ssr/ArrowDown';
+import { ArrowUp as ArrowUpIcon } from '@phosphor-icons/react/dist/ssr/ArrowUp';
+import { CurrencyDollar as CurrencyDollarIcon } from '@phosphor-icons/react/dist/ssr/CurrencyDollar';
+import { Crosshair as CrosshairIcon } from '@phosphor-icons/react/dist/ssr/Crosshair';
+import { PhonePlus } from '@phosphor-icons/react/dist/ssr';
 
-const statusMap = {
-  pending: { label: 'Pending', color: 'warning' },
-  delivered: { label: 'Delivered', color: 'success' },
-  refunded: { label: 'Refunded', color: 'error' },
-} as const;
-
-export interface Order {
-  id: string;
-  customer: { name: string };
-  amount: number;
-  status: 'pending' | 'delivered' | 'refunded';
-  createdAt: Date;
-}
 
 export interface LatestOrdersProps {
-  orders?: Order[];
   sx?: SxProps;
+  game: string;
+  level: string;
+  femratings: string;
+  // femalefriendly: string;
+  // playernum: string;
+  members: string;
+  imageUrl: string;
 }
 
-export function LatestOrders({ orders = [], sx }: LatestOrdersProps): React.JSX.Element {
+// Use this as popular games boxes
+export function LatestOrders({ sx, game, level,femratings, members, imageUrl}: LatestOrdersProps): React.JSX.Element {
+
   return (
     <Card sx={sx}>
-      <CardHeader title="Latest orders" />
-      <Divider />
-      <Box sx={{ overflowX: 'auto' }}>
-        <Table sx={{ minWidth: 800 }}>
-          <TableHead>
-            <TableRow>
-              <TableCell>Order</TableCell>
-              <TableCell>Customer</TableCell>
-              <TableCell sortDirection="desc">Date</TableCell>
-              <TableCell>Status</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {orders.map((order) => {
-              const { label, color } = statusMap[order.status] ?? { label: 'Unknown', color: 'default' };
-
-              return (
-                <TableRow hover key={order.id}>
-                  <TableCell>{order.id}</TableCell>
-                  <TableCell>{order.customer.name}</TableCell>
-                  <TableCell>{dayjs(order.createdAt).format('MMM D, YYYY')}</TableCell>
-                  <TableCell>
-                    <Chip color={color} label={label} size="small" />
-                  </TableCell>
-                </TableRow>
-              );
-            })}
-          </TableBody>
-        </Table>
-      </Box>
-      <Divider />
-      <CardActions sx={{ justifyContent: 'flex-end' }}>
-        <Button
-          color="inherit"
-          endIcon={<ArrowRightIcon fontSize="var(--icon-fontSize-md)" />}
-          size="small"
-          variant="text"
-        >
-          View all
-        </Button>
-      </CardActions>
+      <CardContent>
+        <Stack spacing={3}>
+        <img src={imageUrl} alt="Game Image" style={{ width: '100%', borderRadius: '8px' }} />
+          <Stack direction="row" sx={{ alignItems: 'flex-start', justifyContent: 'space-between' }} spacing={3}>
+            <Stack spacing={1}>
+            <Typography variant="h4">{game}</Typography>
+              <Typography color="text.secondary" variant="overline">
+                <b>{"Game: "}</b> {game}<br />
+                {/* <b>{"Female Friendly Score: "}</b>{femalefriendly}   */}
+              </Typography>
+            </Stack>
+            {/* <Avatar sx={{ backgroundColor: 'var(--mui-palette-primary-main)', height: '56px', width: '56px' }}>
+              <PhonePlus fontSize="var(--icon-fontSize-lg)" />
+            </Avatar> */}
+          </Stack>
+            <Stack sx={{ alignItems: 'center', justifyContent: 'space-between' }} direction="row" spacing={2}>
+              <Stack sx={{ alignItems: 'center'}} direction="row" spacing={0.5}>
+                {"Athena Rating: "}{femratings} <br />
+                {"Level: "}{level} <br />
+              </Stack>
+              <Typography sx={{ textAlign: 'right' }}color="text.secondary" variant="caption">
+                {members}{" Members"}
+              </Typography>
+            </Stack>
+        </Stack>
+      </CardContent>
     </Card>
   );
 }
