@@ -8,46 +8,49 @@ import Typography from '@mui/material/Typography';
 import { ArrowDown as ArrowDownIcon } from '@phosphor-icons/react/dist/ssr/ArrowDown';
 import { ArrowUp as ArrowUpIcon } from '@phosphor-icons/react/dist/ssr/ArrowUp';
 import { CurrencyDollar as CurrencyDollarIcon } from '@phosphor-icons/react/dist/ssr/CurrencyDollar';
+import { Crosshair as CrosshairIcon } from '@phosphor-icons/react/dist/ssr/Crosshair';
+import { PhonePlus } from '@phosphor-icons/react/dist/ssr';
 
 export interface BudgetProps {
-  diff?: number;
-  trend: 'up' | 'down';
   sx?: SxProps;
-  value: string;
+  session: string;
+  game: string;
+  level: string;
+  femalefriendly: string;
+  playernum: string;
+  members: string;
+  imageUrl: string;
 }
 
-export function Budget({ diff, trend, sx, value }: BudgetProps): React.JSX.Element {
-  const TrendIcon = trend === 'up' ? ArrowUpIcon : ArrowDownIcon;
-  const trendColor = trend === 'up' ? 'var(--mui-palette-success-main)' : 'var(--mui-palette-error-main)';
+// Use this as join session boxes
+export function Budget({ sx, session, game, level, playernum, members, imageUrl}: BudgetProps): React.JSX.Element {
 
   return (
     <Card sx={sx}>
       <CardContent>
         <Stack spacing={3}>
+        <img src={imageUrl} alt="Game Image" style={{ width: '100%', borderRadius: '8px' }} />
           <Stack direction="row" sx={{ alignItems: 'flex-start', justifyContent: 'space-between' }} spacing={3}>
             <Stack spacing={1}>
+            <Typography variant="h4">{session}</Typography>
               <Typography color="text.secondary" variant="overline">
-                Budget
+                <b>{"Game: "}</b> {game}<br />
+                {/* <b>{"Female Friendly Score: "}</b>{femalefriendly}   */}
               </Typography>
-              <Typography variant="h4">{value}</Typography>
             </Stack>
             <Avatar sx={{ backgroundColor: 'var(--mui-palette-primary-main)', height: '56px', width: '56px' }}>
-              <CurrencyDollarIcon fontSize="var(--icon-fontSize-lg)" />
+              <PhonePlus fontSize="var(--icon-fontSize-lg)" />
             </Avatar>
           </Stack>
-          {diff ? (
-            <Stack sx={{ alignItems: 'center' }} direction="row" spacing={2}>
-              <Stack sx={{ alignItems: 'center' }} direction="row" spacing={0.5}>
-                <TrendIcon color={trendColor} fontSize="var(--icon-fontSize-md)" />
-                <Typography color={trendColor} variant="body2">
-                  {diff}%
-                </Typography>
+            <Stack sx={{ alignItems: 'center', justifyContent: 'space-between' }} direction="row" spacing={2}>
+              <Stack sx={{ alignItems: 'center'}} direction="row" spacing={0.5}>
+                {"Players needed: "}{playernum} <br />
+                {"Level: "}{level} <br />
               </Stack>
-              <Typography color="text.secondary" variant="caption">
-                Since last month
+              <Typography sx={{ textAlign: 'right' }}color="text.secondary" variant="caption">
+                {members}{" Members"}
               </Typography>
             </Stack>
-          ) : null}
         </Stack>
       </CardContent>
     </Card>

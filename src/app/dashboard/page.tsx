@@ -12,37 +12,31 @@ import { TasksProgress } from '@/components/dashboard/overview/tasks-progress';
 import { TotalCustomers } from '@/components/dashboard/overview/total-customers';
 import { TotalProfit } from '@/components/dashboard/overview/total-profit';
 import { Traffic } from '@/components/dashboard/overview/traffic';
+import { Session } from 'inspector';
 
 export const metadata = { title: `Overview | Dashboard | ${config.site.name}` } satisfies Metadata;
 
 export default function Page(): React.JSX.Element {
   return (
     <Grid container spacing={3}>
-      <Grid lg={3} sm={6} xs={12}>
-        <Budget diff={12} trend="up" sx={{ height: '100%' }} value="$24k" />
+      <Grid lg={4} sm={6} xs={12}>
+        <Budget sx={{ height: 'auto' }} session="Rita's Game" game="Counter Strike 2" level='Beginner' playernum='4' members='17,400' imageUrl = 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/730/capsule_616x353.jpg?t=1716504320'/>
       </Grid>
-      <Grid lg={3} sm={6} xs={12}>
-        <TotalCustomers diff={16} trend="down" sx={{ height: '100%' }} value="1.6k" />
-      </Grid>
-      <Grid lg={3} sm={6} xs={12}>
-        <TasksProgress sx={{ height: '100%' }} value={75.5} />
-      </Grid>
-      <Grid lg={3} sm={6} xs={12}>
-        <TotalProfit sx={{ height: '100%' }} value="$15k" />
-      </Grid>
-      <Grid lg={8} xs={12}>
-        <Sales
-          chartSeries={[
-            { name: 'This year', data: [18, 16, 5, 8, 3, 14, 14, 16, 17, 19, 18, 20] },
-            { name: 'Last year', data: [12, 11, 4, 6, 2, 9, 9, 10, 11, 12, 13, 13] },
-          ]}
-          sx={{ height: '100%' }}
-        />
+      <Grid lg={4} sm={6} xs={12}>
+        <Budget sx={{ height: 'auto' }} session="Miri's Game" game="League of Legends" level='Advanced' playernum='5' members='35,678' imageUrl='https://cdn1.epicgames.com/offer/24b9b5e323bc40eea252a10cdd3b2f10/EGS_LeagueofLegends_RiotGames_S1_2560x1440-80471666c140f790f28dff68d72c384b'/>
       </Grid>
       <Grid lg={4} md={6} xs={12}>
         <Traffic chartSeries={[63, 15, 22]} labels={['Desktop', 'Tablet', 'Phone']} sx={{ height: '100%' }} />
       </Grid>
-      <Grid lg={4} md={6} xs={12}>
+      <Grid lg={4} sm={6} xs={12}>
+        <Budget sx={{ height: 'auto' }} session="InfernoIvy's Game" game="Elden Ring" level='Beginner' femalefriendly='80%' playernum='5' members='9,678' imageUrl = 'https://static.bandainamcoent.eu/high/elden-ring/elden-ring/00-page-setup/elden-ring-new-header-mobile.jpg'/>
+      </Grid>
+      <Grid lg={4} sm={6} xs={12}>
+        <Budget sx={{ height: 'auto' }} session="AstraNova's Game" game="Grand Theft Auto" level='Intermediate' femalefriendly='70%' playernum='3' members='5,678' imageUrl = 'https://assetsio.gnwcdn.com/eurogamer-zjp1vx.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp'/>
+      </Grid>
+      
+
+      {/* <Grid lg={4} md={6} xs={12}>
         <LatestProducts
           products={[
             {
@@ -127,7 +121,7 @@ export default function Page(): React.JSX.Element {
           ]}
           sx={{ height: '100%' }}
         />
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 }
