@@ -46,7 +46,7 @@ export function LatestOrders({ sx, game, level,femratings, members, imageUrl}: L
             <Stack sx={{ alignItems: 'center', justifyContent: 'space-between' }} direction="row" spacing={2}>
               <Stack sx={{ alignItems: 'center'}} direction="row" spacing={0.5}>
                 {"Athena Rating: "}{femratings} <br />
-                {"Level: "}{level} <br />
+                {"Female friendliness: "}{level} <br />
               </Stack>
               {/* <Typography sx={{ textAlign: 'right' }}color="text.secondary" variant="caption">
                 {members}{" Members"}

@@ -44,7 +44,7 @@ export function SideNav(): React.JSX.Element {
         maxWidth: '100%',
         position: 'fixed',
         scrollbarWidth: 'none',
-        top: 0,
+        top: 0, 
         width: 'var(--SideNav-width)',
         zIndex: 'var(--SideNav-zIndex)',
         '&::-webkit-scrollbar': { display: 'none' },
@@ -52,7 +52,7 @@ export function SideNav(): React.JSX.Element {
     >
       <Stack spacing={2} sx={{ p: 3 }}>
         <Box component={RouterLink} href={paths.home} sx={{ display: 'inline-flex' }}>
-          <Logo color="light" height={32} width={122} />
+          <Logo color="light" height={60} width={200} />
         </Box>
         {/* <Box
           sx={{

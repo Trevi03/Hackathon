@@ -14,6 +14,7 @@ import { TotalCustomers } from '@/components/dashboard/overview/total-customers'
 import { TotalProfit } from '@/components/dashboard/overview/total-profit';
 import { Traffic } from '@/components/dashboard/overview/traffic';
 import { Session } from 'inspector';
+import { Welcome } from '@/components/dashboard/overview/welcome';
 import Sidebar from './sidebar';
 
 export const metadata = { title: `Overview | Dashboard | ${config.site.name}` } satisfies Metadata;
@@ -23,6 +24,9 @@ export default function Page(): React.JSX.Element {
     <Grid container spacing={3}>
       <Grid item xs={12} md={8} lg={8}> {/* First column takes up 2/3 of the width on md and lg screens */}
         <Grid container spacing={3}>
+          <Grid item xs={12} sm={12}> {/* welcome */}
+            <Welcome sx={{ height: 'auto' }} />
+          </Grid>
           <Grid item xs={12} sm={12}> {/* Join Session */}
             <LatestProducts sx={{ height: 'auto' }} text='Join Session' topmarg={0}/>
           </Grid>
@@ -36,18 +40,18 @@ export default function Page(): React.JSX.Element {
             <LatestProducts sx={{ height: 'auto' }} text='Recommended Games'topmarg={5}/>
           </Grid>
           <Grid item xs={12} sm={6}> {/* Third item in the first column */}
-            <LatestOrders sx={{ height: 'auto' }} game="Elden Ring" level="Beginner" femratings="80%" members="9,678" imageUrl="https://static.bandainamcoent.eu/high/elden-ring/elden-ring/00-page-setup/elden-ring-new-header-mobile.jpg" />
+            <LatestOrders sx={{ height: 'auto' }} game="Elden Ring" level='30%' femratings="80%" members="9,678" imageUrl="https://static.bandainamcoent.eu/high/elden-ring/elden-ring/00-page-setup/elden-ring-new-header-mobile.jpg" />
           </Grid>
           <Grid item xs={12} sm={6}> {/* Fourth item in the first column */}
-            <LatestOrders sx={{ height: 'auto' }} game="Grand Theft Auto" level="Intermediate" femratings="70%" members="5,678" imageUrl="https://assetsio.gnwcdn.com/eurogamer-zjp1vx.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" />
+            <LatestOrders sx={{ height: 'auto' }} game="Grand Theft Auto" level='80%' femratings="70%" members="5,678" imageUrl="https://assetsio.gnwcdn.com/eurogamer-zjp1vx.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" />
           </Grid>
         </Grid>
       </Grid>
       <Grid item xs={12} md={4} lg={4}> {/* Second column takes up 1/3 of the width on md and lg screens */}
         <Grid container spacing={3}>
           <Grid item xs={12}> {/* First item in the second column */}
-            <Sidebar sx={{ height: '100%' }} />
-          </Grid>
+            <Sidebar/>
+          </Grid> 
         </Grid>
       </Grid>
     </Grid>
