@@ -17,7 +17,7 @@ export default function Page(): React.JSX.Element {
       <div>
         <Typography variant="h4">Create Game Session</Typography>
       </div>
-      <Grid container justifyContent="center" alignItems="center">
+      <Grid container justifyContent="center" alignItems="center" sx={{ width: '1250px' }}>
         <Grid lg={8} md={6} xs={12}>
           <GameSessionForm />
         </Grid>
