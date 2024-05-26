@@ -8,6 +8,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 
 import { config } from '@/config';
 import { GameSessionForm } from '@/components/dashboard/booking/game-booking-form';
+import { width } from '@mui/system';
 
 // export const metadata = { title: `Create Session | Dashboard | ${config.site.name}` } satisfies Metadata;
 
@@ -17,7 +18,7 @@ export default function Page(): React.JSX.Element {
       <div>
         <Typography variant="h4">Create Game Session</Typography>
       </div>
-      <Grid container justifyContent="center" alignItems="center">
+      <Grid container justifyContent="center" alignItems="center" sx = {{width: '1250px'}}>
         <Grid lg={8} md={6} xs={12}>
           <GameSessionForm />
         </Grid>

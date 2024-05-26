@@ -88,7 +88,7 @@ export function GameSessionForm(): React.JSX.Element {
               <FormControl fullWidth required>
                 <InputLabel>Title</InputLabel>
                 <OutlinedInput
-                  value={title}
+                  value={formData.title}
                   onChange={handleTitleChange}
                   label="Title"
                 />
@@ -98,7 +98,7 @@ export function GameSessionForm(): React.JSX.Element {
               <FormControl fullWidth required>
                 <InputLabel>Select Game</InputLabel>
                 <Select
-                  value={game}
+                  value={formData.game}
                   onChange={handleGameChange}
                   label="Select Game"
                 >
@@ -115,7 +115,7 @@ export function GameSessionForm(): React.JSX.Element {
                 <InputLabel>Players</InputLabel>
                   <Select
                     multiple
-                    value={players}
+                    value={formData.players}
                     onChange={handlePlayersChange}
                     label="Players"
                   >
@@ -135,7 +135,7 @@ export function GameSessionForm(): React.JSX.Element {
                       <TextField {...props} />
                     )}
                     label="Date & Time"
-                    value={dateTime}
+                    value={formData.dateTime}
                     onChange={handleDateTimeChange}
                   />
                 </LocalizationProvider>
