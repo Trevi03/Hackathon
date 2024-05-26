@@ -23,11 +23,17 @@ export default function Page(): React.JSX.Element {
     <Grid container spacing={3}>
       <Grid item xs={12} md={8} lg={8}> {/* First column takes up 2/3 of the width on md and lg screens */}
         <Grid container spacing={3}>
+          <Grid item xs={12} sm={12}> {/* Join Session */}
+            <LatestProducts sx={{ height: 'auto' }} text='Join Session' topmarg={0}/>
+          </Grid>
           <Grid item xs={12} sm={6}> {/* First item in the first column */}
             <Budget sx={{ height: 'auto' }} session="Rita's Game" game="Counter Strike 2" level="Beginner" playernum="4" members="17,400" imageUrl="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/730/capsule_616x353.jpg?t=1716504320" />
           </Grid>
           <Grid item xs={12} sm={6}> {/* Second item in the first column */}
             <Budget sx={{ height: 'auto' }} session="Miri's Game" game="League of Legends" level="Advanced" playernum="5" members="35,678" imageUrl="https://cdn1.epicgames.com/offer/24b9b5e323bc40eea252a10cdd3b2f10/EGS_LeagueofLegends_RiotGames_S1_2560x1440-80471666c140f790f28dff68d72c384b" />
+          </Grid>
+          <Grid item xs={12} sm={12}> {/* Recommended Games */}
+            <LatestProducts sx={{ height: 'auto' }} text='Recommended Games'topmarg={5}/>
           </Grid>
           <Grid item xs={12} sm={6}> {/* Third item in the first column */}
             <LatestOrders sx={{ height: 'auto' }} game="Elden Ring" level="Beginner" femratings="80%" members="9,678" imageUrl="https://static.bandainamcoent.eu/high/elden-ring/elden-ring/00-page-setup/elden-ring-new-header-mobile.jpg" />

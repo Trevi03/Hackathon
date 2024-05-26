@@ -35,7 +35,7 @@ export function LatestOrders({ sx, game, level,femratings, members, imageUrl}: L
             <Stack spacing={1}>
             <Typography variant="h4">{game}</Typography>
               <Typography color="text.secondary" variant="overline">
-                <b>{"Game: "}</b> {game}<br />
+                <b>{"Downloads: "}</b> {members}<br />
                 {/* <b>{"Female Friendly Score: "}</b>{femalefriendly}   */}
               </Typography>
             </Stack>
@@ -48,9 +48,9 @@ export function LatestOrders({ sx, game, level,femratings, members, imageUrl}: L
                 {"Athena Rating: "}{femratings} <br />
                 {"Level: "}{level} <br />
               </Stack>
-              <Typography sx={{ textAlign: 'right' }}color="text.secondary" variant="caption">
+              {/* <Typography sx={{ textAlign: 'right' }}color="text.secondary" variant="caption">
                 {members}{" Members"}
-              </Typography>
+              </Typography> */}
             </Stack>
         </Stack>
       </CardContent>
