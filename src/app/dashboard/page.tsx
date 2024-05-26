@@ -14,6 +14,7 @@ import { TotalCustomers } from '@/components/dashboard/overview/total-customers'
 import { TotalProfit } from '@/components/dashboard/overview/total-profit';
 import { Traffic } from '@/components/dashboard/overview/traffic';
 import { Session } from 'inspector';
+import Sidebar from './sidebar';
 
 export const metadata = { title: `Overview | Dashboard | ${config.site.name}` } satisfies Metadata;
 
@@ -39,7 +40,7 @@ export default function Page(): React.JSX.Element {
       <Grid item xs={12} md={4} lg={4}> {/* Second column takes up 1/3 of the width on md and lg screens */}
         <Grid container spacing={3}>
           <Grid item xs={12}> {/* First item in the second column */}
-            <Traffic chartSeries={[63, 15, 22]} labels={['Desktop', 'Tablet', 'Phone']} sx={{ height: '100%' }} />
+            <Sidebar sx={{ height: '100%' }} />
           </Grid>
         </Grid>
       </Grid>

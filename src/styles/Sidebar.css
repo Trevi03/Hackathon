@@ -1,0 +1,63 @@
+/* App.css */
+.sidebar {
+  width: 300px;
+  background-color: #2C2C54;
+  color: white;
+  padding: 20px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.profile {
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.time-info {
+  background-color: #444475;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.add-player,
+.join-call {
+  background-color: #444475;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.sidebar-container{
+  display: flex;
+  justify-content: center; /* Center align the content horizontally */
+  align-items: center;
+}
