@@ -23,7 +23,7 @@ export interface BudgetProps {
 }
 
 // Use this as join session boxes
-export function Budget({ sx, session, game, level, femalefriendly, playernum, members, imageUrl}: BudgetProps): React.JSX.Element {
+export function Budget({ sx, session, game, level, playernum, members, imageUrl}: BudgetProps): React.JSX.Element {
 
   return (
     <Card sx={sx}>
@@ -35,7 +35,7 @@ export function Budget({ sx, session, game, level, femalefriendly, playernum, me
             <Typography variant="h4">{session}</Typography>
               <Typography color="text.secondary" variant="overline">
                 <b>{"Game: "}</b> {game}<br />
-                <b>{"Female Friendly Score: "}</b>{femalefriendly}  
+                {/* <b>{"Female Friendly Score: "}</b>{femalefriendly}   */}
               </Typography>
             </Stack>
             <Avatar sx={{ backgroundColor: 'var(--mui-palette-primary-main)', height: '56px', width: '56px' }}>

@@ -20,10 +20,10 @@ export default function Page(): React.JSX.Element {
   return (
     <Grid container spacing={3}>
       <Grid lg={4} sm={6} xs={12}>
-        <Budget sx={{ height: 'auto' }} session="Rita's Game" game="Counter Strike 2" level='Beginner' femalefriendly='40%' playernum='4' members='17,400' imageUrl = 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/730/capsule_616x353.jpg?t=1716504320'/>
+        <Budget sx={{ height: 'auto' }} session="Rita's Game" game="Counter Strike 2" level='Beginner' playernum='4' members='17,400' imageUrl = 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/730/capsule_616x353.jpg?t=1716504320'/>
       </Grid>
       <Grid lg={4} sm={6} xs={12}>
-        <Budget sx={{ height: 'auto' }} session="Miri's Game" game="League of Legends" level='Advanced' femalefriendly='20%' playernum='5' members='35,678' imageUrl='https://cdn1.epicgames.com/offer/24b9b5e323bc40eea252a10cdd3b2f10/EGS_LeagueofLegends_RiotGames_S1_2560x1440-80471666c140f790f28dff68d72c384b'/>
+        <Budget sx={{ height: 'auto' }} session="Miri's Game" game="League of Legends" level='Advanced' playernum='5' members='35,678' imageUrl='https://cdn1.epicgames.com/offer/24b9b5e323bc40eea252a10cdd3b2f10/EGS_LeagueofLegends_RiotGames_S1_2560x1440-80471666c140f790f28dff68d72c384b'/>
       </Grid>
       <Grid lg={4} md={6} xs={12}>
         <Traffic chartSeries={[63, 15, 22]} labels={['Desktop', 'Tablet', 'Phone']} sx={{ height: '100%' }} />
